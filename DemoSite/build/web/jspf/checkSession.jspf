@@ -1,0 +1,12 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<%
+    // 檢查使用者是否有登入
+    String isLogin =(String) session.getAttribute("isLogin");
+    if( isLogin == null || isLogin.equals("no")) {
+        // 尚未登入
+        response.sendRedirect("beLogin.jsp");
+    } else {
+        // 已登入
+    }
+%>
